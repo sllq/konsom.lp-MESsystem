@@ -465,6 +465,10 @@ section .orange {
     color: #fc8e40 !important;
 }
 
+section .blue {
+    color: #2a91d8 !important;
+}
+
 section .timeline>li {
     position: relative;
     min-height: 50px;
@@ -694,9 +698,9 @@ section .timeline .text-muted {
     }
 
     section .timeline>li .timeline-image {
-        width: 170px;
-        height: 170px;
-        margin-left: -85px;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
     }
 
     section .timeline>li .timeline-image h4 {
@@ -746,6 +750,14 @@ section #contacts .col-sm {
     text-align: center;
 }
 
+section #contacts .nowrap {
+    flex-wrap: nowrap;
+}
+
+section  #contacts .flex-card-4 {
+    flex-basis: 20%;
+}
+
 @media screen and (max-width: 1024px) {
     section #contacts .col-sm { 
         width: 100%; 
@@ -771,6 +783,10 @@ section #contacts .col-sm img {
     display: block !important;
     margin: auto !important;
     padding: 5px;
+}
+
+section #contacts span {
+    display: block;
 }
 
 /* Media */
@@ -892,7 +908,7 @@ section #contacts .col-sm img {
         background-repeat: no-repeat;
     }
     section .row {
-        display: grid;
+        display: flex;
     }
 
     section #partners  .row {
@@ -1015,8 +1031,9 @@ section .col-sm span {
     text-align: justify;
     /* margin: -5px 10px 0 10px; */
     align-items: center;
-    display: flex;
+    display: block;
     padding-right: 2%;
+    margin: auto 0;
 }
 
 
@@ -1107,6 +1124,7 @@ section .quote {
     /* height: 50%; */
     padding-right: 0.5rem;
     padding-left: 0.5rem;
+    white-space: nowrap;
 }
 
 .visual-block-3 img {
@@ -1120,7 +1138,7 @@ section .quote {
 .slick-slide img {
     display: block;
     max-width: 100%;
-    height: 150px;
+    height: 75px;
     margin: auto;
 }
 
@@ -1240,7 +1258,7 @@ section .heading h3,h4 {
 
   
 .slick-dots-konsom {
-    position: absolute;
+    /* position: absolute; */
     bottom: -35px;
     display: block;
     width: 100%;
@@ -1644,6 +1662,7 @@ section .flex-4 {
     flex: 1 1 20%;
     display: block;
 }
+
 
 section .row-flex {
     display: flex;
