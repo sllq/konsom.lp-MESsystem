@@ -1,4 +1,4 @@
-﻿/* Landing styles css ver 0.4 */
+﻿/* Landing styles css ver 0.5 */
 
 .person-block img {
     width: auto;
@@ -68,6 +68,7 @@ section {
     min-width: 320px;
     box-sizing: border-box;
     /* overflow: hidden; */
+    margin-top:10px;
 }
 
 section ul, li {
@@ -119,14 +120,13 @@ section a.button {
         display: inline-block;
         padding:0.35em 1.2em;
         border:0.1em solid black !important;
-        background: black;
+        background: inherit;
         margin:auto;
-        border-radius:0.12em;
         box-sizing: border-box;
         text-decoration:none;
         font-weight:600;
         font-size:1.5rem;
-        color:white;
+        color:inherit;
         text-align:center;
         transition: all 0.2s;
         width: 30%;
@@ -450,19 +450,31 @@ section .timeline .timeline-heading h4 {
 }
 
 section .timeline .subheading {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
 }
 
-.visual-block-5 {
+section .visual-block-5 {
     font-size: 2rem;
     font-weight: 700;
     color: #fc8e40;
     margin: auto;
 }
 
+section .subheading {
+    font-size: 19px;
+}
+
 section .orange {
     color: #fc8e40 !important;
+}
+
+section .orange-b {
+    background-color: #fc8e40 !important;
+}
+
+section .blue-b {
+    background-color: #2a91d8 !important;
 }
 
 section .blue {
@@ -744,10 +756,12 @@ section #tabs .heading a {
     line-height: 3em;
 }
 
-section #contacts .col-sm {
-    display: inline-block;
-    flex: none;
-    text-align: center;
+section #contacts .col-extra-margin {
+    max-width: 319px;
+}
+
+section  #contacts .col-sm {
+
 }
 
 section #contacts .nowrap {
@@ -907,10 +921,12 @@ section #contacts span {
         background-size: contain;
         background-repeat: no-repeat;
     }
+    section #table>.row {
+        display: flex;
+    }
     section .row {
         display: flex;
     }
-
     section #partners  .row {
         /* overflow: auto; */
         white-space: nowrap;
@@ -987,11 +1003,11 @@ section div.relative-about {
 section div.relative-about p {
     text-align: justify;
     text-indent: 2rem;
-    padding-top:1rem;
+    /* padding-top:1rem; */
 }
 
 section div.relative-about p:first-of-type {
-    padding-top: 0;
+    /* padding-top: 0; */
 }
 
 section .relative-slider
@@ -1116,7 +1132,7 @@ section .quote {
 .visual-block-3 {
     float: left;
     text-transform: uppercase;
-    font-size: 4rem;
+    font-size: 32px;
     font-weight: 600;
     color: #2a91d8;
     margin: auto 0 auto 0;
@@ -1133,12 +1149,15 @@ section .quote {
     height: 44px;
 }
 
+.grayback {
+    background-color: #4f4f51 !important;
+}
 
 
 .slick-slide img {
     display: block;
     max-width: 100%;
-    height: 75px;
+    height: 90px !important;
     margin: auto;
 }
 
@@ -1162,16 +1181,12 @@ section .text-left {text-align: left !important;}
 section .text-right {text-align: right !important;}
 section .text-justify {text-align: justify !important;}
 section .text-center {text-align: center !important;}
-
 section .text-small {font-size: small !important;}
+section .bold {font-weight: bold !important;}
+section .italic {font-style: italic !important;}
+section .text-black {color: black !important}
+section .text-white {color: white !important}
 
-section .bold {
-    font-weight: bold;
-}
-
-section .italic {
-    font-style: italic;
-}
 
 section .flex-center {
     align-items: center;
@@ -1257,7 +1272,7 @@ section .heading h3,h4 {
   }
 
   
-.slick-dots-konsom {
+section .slick-dots-konsom {
     /* position: absolute; */
     bottom: -35px;
     display: block;
@@ -1348,10 +1363,10 @@ section .prev {
     display: block;
     position: relative;
     /* left: 35%; */
-    margin-block-end: 20px;
+    /* margin-block-end: 20px; */
 }
 .prev.slick-arrow::after {
-    content: '<';
+    content: url('/stock/themes/konsom/lp/img/arrow-left.png');
     font-size: 44px;
 }
 
@@ -1365,7 +1380,7 @@ section .next {
 }
 
 .next.slick-arrow::after {
-    content: '>';
+    content: url('/stock/themes/konsom/lp/img/arrow-right.png');
     font-size: 44px;
 }
 
@@ -1390,13 +1405,13 @@ section details[open] summary:before {
 }
 
 section details[open] summary ~ * {
-    /* animation: sweep .8s ease-in-out; */
+    animation: sweep .8s ease-in-out;
   }
   
-  /* @keyframes sweep {
-    0%    {opacity: 0; margin-left: -10px}
-    100%  {opacity: 1; margin-left: 0px}
-  } */
+  @keyframes sweep {
+    0%    {opacity: 0; }
+    100%  {opacity: 1; }
+  }
 
 section details summary:after {
     content: '+' !important;
@@ -1409,25 +1424,27 @@ section details summary:after {
 }
 
 section details[open] summary:after {
-    content: '-' !important;
+    content: '–' !important;
     display: flex !important;
     color: #2a91d8 !important;
     font-size: 38px !important;
     margin: auto;
-    /* animation-name: dropdown; */
-    /* animation-duration: 3s;
-    transition-duration: 0.8s;
+    /* transition-duration: 0.8s;
     transition-property: transform;
     transform: rotate(0deg); */
     outline: none;
     margin-right: 1rem;
 }
 
+/* section details summary.collapse:after {
+    content: '• • •';
+}
+
+section details[open] summary.collapse:after {
+    content: '• • •';
+} */
+
 section details:not([open]) summary:after {
-    /* transform: rotate(90deg);
-    animation-duration: 3s;
-    transition-duration: 0.8s;
-    transition-property: transform; */
     outline: none;
     margin-right: 1rem;
 }
@@ -1439,14 +1456,17 @@ section details {
 }
 
 section summary {
-    border-left: 4px solid;
+    /* border-left: 4px solid;
     border-right: 4px solid;
-    border-image: linear-gradient(to bottom, #2a68a5, #3d91d8) 1 100%;
+    border-image: linear-gradient(to bottom, #2a68a5, #3d91d8) 1 100%; */
     display: flex;
     margin-block-end: 1rem;
 }
 
-
+section details.block {
+    display: flex;
+    flex-basis: 32%;
+}
 
 @media (min-width: 801px) and (max-width: 1337px) {
 	body > div.content-wrapper > div.content {
@@ -1519,19 +1539,19 @@ body > div.content-wrapper > div.content .column-right li:not([class*="ya"]) a:h
   border-bottom: 1px dotted #fc8e40;
 }
 
-/* simple line separator
+/* simple line separator */
 
-section .separator {
+section .separator-hr {
     position: relative;
     content: '';
-    background: linear-gradient(45deg, #2a68a5, #3d91d8);
+    background: linear-gradient(45deg, black, black);
     width: 100%;
-    height: 6px;
+    height: 1px;
     bottom: 0;
     left: 0;
-    /* border-radius: 0 0 5px 5px / 0 0 5px 5px; 
-    margin-block-end: 5px;
-} */
+    margin-block-end: 15px;
+    position: relative;
+} 
 
 section .separator {
     position: relative;
@@ -1561,7 +1581,7 @@ section .separator {
 
 /* backgronds for headings */
 
-section .heading1 {background-image: url("/stock/themes/konsom/lp/img/cps/ТЗ 2.png") !important;}
+section .heading1 {background-image: url("/stock/themes/konsom/lp/img/MESsystem/intro.png") !important;}
 section #heading2 {background-image: url("../img/siemens_headings/heading2.png");}
 section #heading3 {background-image: url("../img/siemens_headings/heading3.png");}
 section #heading4 {background-image: url("../img/siemens_headings/heading4.png");}
@@ -1621,6 +1641,10 @@ section .col-extra-margin {
     margin: 1.5rem 2.25rem 0 2.25rem
 }
 
+section .extra-padding {
+    padding: 0.5rem;
+}
+
 section .container-fluid {
     flex: 1 100%;
 }
@@ -1653,7 +1677,7 @@ section .flex-2 {
 }
 
 section .flex-3 {
-    flex: 1 1 32%;
+    flex: 1 1 30%;
     display: block;
 }
 
@@ -1701,4 +1725,15 @@ section .row a {
     }
 }
 
+section div.content-one {
+    display:none;
+}
 
+section #intro {
+    height: 400px;
+}
+@media screen and (max-width:600px) {
+    section #intro {
+        height: auto;
+    }
+}

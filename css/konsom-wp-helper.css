@@ -3,6 +3,9 @@
 html {
     font-family: 'Open Sans', sans-serif;
 }
+.wrap {
+	width: 1337px !important;
+}
 #tabs > ul {
 	display: table;
 	max-width: 639px;
