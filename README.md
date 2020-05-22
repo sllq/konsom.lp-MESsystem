@@ -1,2 +1,2 @@
-# konsom.lp-CPS
+# konsom.lp-MESsystem
 MES-СИСТЕМА
