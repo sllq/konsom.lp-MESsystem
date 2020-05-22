@@ -1,2 +1,2 @@
-# konsom.lp-CPS
-ПРОМЫШЛЕННЫЕ КИБЕРФИЗИЧЕСКИЕ СИСТЕМЫ
+# konsom.lp-MESsystem
+MES-СИСТЕМА
